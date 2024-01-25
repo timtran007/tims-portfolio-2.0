@@ -18,7 +18,6 @@ function Navbar() {
     const handleMenuClick = () => {
         setIsMobileNavOpen(!isMobileNavOpen)
     }
-    console.log('isMobileNavOpen', isMobileNavOpen)
 
     return (
         <nav className={`fixed top-0 left-0 right-0 z-10 bg-[#121212] ${isMobileNavOpen ? 'bg-opacity-100' : 'bg-opacity-90'}`}>

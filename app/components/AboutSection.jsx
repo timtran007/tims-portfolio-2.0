@@ -63,7 +63,7 @@ export default function AboutSection() {
                     <p className="text-base md:text-lg">
                         I am a driven fullstack developer leveraging a background in marketing to provide unique perspectives on how users interact with websites and software platforms. I love solving interesting and challenging problems utilizing the skills I have developed over the years. 
                     </p>
-                    <div className="flex flex-row mt-8">
+                    <div className="flex flex-row mt-8 text-base md:text-lg">
                         <TabButton 
                             selectTab={() => handleTabChange("skills")} 
                             active={aboutMeTab === "skills"}

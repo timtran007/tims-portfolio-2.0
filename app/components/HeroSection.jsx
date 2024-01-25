@@ -37,7 +37,7 @@ export default function HeroSection() {
                 </p>
                 <div>
                     <button className='px-6 py-3 rounded-full w-full sm:w-fit mr-2 my-4 bg-gradient-to-br text-white from-green-700 via-blue-400 to-pink-700 hover:from-pink-800 hover:via-blue-500 hover:to-green-800 transition-all duration-800'>
-                        Hire Me
+                        Let&apos;s Talk
                     </button>
                     <button className='px-1 py-1 rounded-full w-full sm:w-fit bg-gradient-to-br from-green-500 via-blue-300 to-pink-500 hover:from-pink-400 hover:via-blue-500 hover:to-green-400'>
                         <span className='block bg-white dark:bg-black w-full sm:w-fit rounded-full px-5 py-2'>
