@@ -5,7 +5,7 @@ import timsPic from '../../public/images/tims-profile-pic.jpg'
 import { TypeAnimation } from 'react-type-animation'
 
 
-function HeroSection() {
+export default function HeroSection() {
   return (
     <section className="lg:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -32,8 +32,8 @@ function HeroSection() {
                         style={{ fontSize: '.75em', display: 'inline-block'}}
                     />
                 </h1>
-                <p className='text-base sm:text-lg mb-6 lg:text-xl'>
-                    I am a software developer looking to leverage 6+ years of experience in marketing to collaborate with various teams to ship products. With keen attention to detail and a passion for exploring best practices to help shape quality code, while solving interesting problems with technology.
+                <p className='text-base sm:text-lg mb-2 lg:text-xl'>
+                    With keen attention to detail and a passion for exploring best practices to help shape quality code, I love solving interesting problems with technology.
                 </p>
                 <div>
                     <button className='px-6 py-3 rounded-full w-full sm:w-fit mr-2 my-4 bg-gradient-to-br from-green-700 via-blue-400 to-pink-700 hover:from-pink-800 hover:via-blue-500 hover:to-green-800 transition-all duration-800'>
@@ -54,6 +54,7 @@ function HeroSection() {
                         className='rounded-full'
                         width={300}
                         height={300}
+                        priority
                     />
                 </div>
             </div>
@@ -61,5 +62,3 @@ function HeroSection() {
     </section>
   )
 }
-
-export default HeroSection
