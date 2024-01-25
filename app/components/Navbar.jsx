@@ -7,11 +7,10 @@ import Bars3Icon from "@heroicons/react/24/solid/Bars3Icon"
 import XMarkIcon from "@heroicons/react/24/solid/XMarkIcon"
 
 const navLinks = [
-    {title: 'About', href: '/about'},
-    {title: 'Skills', href: '/skills'},
-    {title: 'Projects', href: '/projects'},
-    {title: 'Blog', href: '/blog'},
-    {title: 'Contact', href: '/contact'}
+    {title: 'About', href: '/#about'},
+    {title: 'Skills', href: '/#skills'},
+    {title: 'Projects', href: '/#projects'},
+    {title: 'Contact', href: '/#contact'}
 ]
 
 function Navbar() {
@@ -24,8 +23,8 @@ function Navbar() {
     return (
         <nav className={`fixed top-0 left-0 right-0 z-10 bg-[#121212] ${isMobileNavOpen ? 'bg-opacity-100' : 'bg-opacity-90'}`}>
             <div className="flex flex-wrap items-center justify-between mx-auto py-4 px-8">
-                <Link href={"/"} className="text-4xl font-semibold">
-                    LOGO
+                <Link href={"/"} className="text-4xl font-semibold text-transparent bg-clip-text bg-gradient-to-br from-green-500 via-blue-400 to-pink-500">
+                    TT
                 </Link>
                 <div className="mobileMenu block md:hidden">
                     {isMobileNavOpen ?
