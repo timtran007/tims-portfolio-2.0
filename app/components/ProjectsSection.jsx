@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import ProjectCard from './ProjectCard'
 import mealTimeImage from '../../public/images/projects/meal-time.png'
 import foodiesImage from '../../public/images/projects/foodies.png'
@@ -11,6 +11,7 @@ import onRecallImage from '../../public/images/projects/on-recall.png'
 import telemedicaImage from '../../public/images/projects/telemedica.png'
 import confidentialProjectImage from '../../public/images/projects/confidential-project.jpg'
 import ProjectTag from './ProjectTag'
+import { motion, useInView } from 'framer-motion'
 
 const projectsData = [
     {
@@ -101,15 +102,23 @@ const projectsData = [
   ];
 
 export default function ProjectsSection() {
+
     const [tag, setTag] = useState('All')
+    const ref = useRef(null)
+    const isInView = useInView(ref, { once: true })
 
     const handleTagChange = (newTag) => {
         setTag(newTag)
     }
 
     const filteredProjects = projectsData.filter(project => project.tags.includes(tag))
+
+    const cardVariants = {
+        initial: { y:  50, opacity: 0 },
+        animate: { y: 0, opacity: 1 },
+    }
     return (
-        <>
+        <section>
             <h2 className="text-center text-4xl font-bold mt-4 mb-6">My Projects</h2>
             <div className='flex flex-wrap flex-row justify-center items-center gap-2 py-6 px-4'>
                 <ProjectTag handleTagChange={handleTagChange} tag="All" isSelected={tag === "All"}/>
@@ -117,19 +126,26 @@ export default function ProjectsSection() {
                 <ProjectTag handleTagChange={handleTagChange} tag="Web App" isSelected={tag === "Web App"}/>
                 <ProjectTag handleTagChange={handleTagChange} tag="Desktop App" isSelected={tag === "Desktop App"}/>
             </div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-8 mb-24'>
-                {filteredProjects.map( project => (
-                    <ProjectCard
+            <ul ref={ref} className='grid lg:grid-cols-3 md:grid-cols-2 gap-8 mb-24'>
+                {filteredProjects.map( (project, index) => (
+                    <motion.li 
+                        variants={cardVariants}
+                        initial="initial"
+                        animate={isInView ? "animate" : "initial"}
+                        transition={{ duration: 1, delay: index * 0.6 }}
                         key={project.title}
-                        title={project.title}
-                        imgURL={project.appImage}
-                        techStack={project.techStack}
-                        description={project.description}
-                        externalLink={project.liveLink}
-                        gitURL = {project.gitURL}
-                    />
+                    >
+                        <ProjectCard
+                            title={project.title}
+                            imgURL={project.appImage}
+                            techStack={project.techStack}
+                            description={project.description}
+                            externalLink={project.liveLink}
+                            gitURL = {project.gitURL}
+                        />
+                    </motion.li>
                 ))}
-            </div>
-        </>
+            </ul>
+        </section>
     )
 }
