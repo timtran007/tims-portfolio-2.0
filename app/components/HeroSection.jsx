@@ -47,7 +47,7 @@ export default function HeroSection() {
                 </div>
             </div>
             <div className='col-span-5 place-self-center mt-12 lg:mt-0'>
-                <div className='rounded-full shadow-white shadow-2xl w-[250px]'>
+                <div className='rounded-full shadow-white shadow-2xl w-[250px] mb-8'>
                     <Image
                         src={timsPic}
                         alt='hero image'
