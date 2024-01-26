@@ -1,7 +1,6 @@
 import Link from "next/link"
 
 export default function NavLink({ href, title, onHandleLinkClick}) {
-    console.log(onHandleLinkClick)
     return(
         <Link
             href={href}

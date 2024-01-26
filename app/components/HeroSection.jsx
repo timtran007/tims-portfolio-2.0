@@ -4,6 +4,7 @@ import Image from 'next/image'
 import timsPic from '../../public/images/tims-profile-pic.jpg'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 
 
 export default function HeroSection() {
@@ -42,14 +43,18 @@ export default function HeroSection() {
                     With keen attention to detail and a passion for exploring best practices to help shape quality code, I love solving interesting problems with technology.
                 </p>
                 <div>
-                    <button className='px-6 py-3 rounded-full w-full sm:w-fit mr-2 my-4 bg-gradient-to-br text-white from-green-700 via-blue-400 to-pink-700 hover:from-pink-800 hover:via-blue-500 hover:to-green-800 transition-all duration-800'>
-                        Let&apos;s Talk
-                    </button>
-                    <button className='px-1 py-1 rounded-full w-full sm:w-fit bg-gradient-to-br from-green-500 via-blue-300 to-pink-500 hover:from-pink-400 hover:via-blue-500 hover:to-green-400'>
-                        <span className='block bg-white dark:bg-black w-full sm:w-fit rounded-full px-5 py-2'>
-                            Download Resume
-                        </span>
-                    </button>
+                    <Link href='/#contact'>
+                        <button className='px-6 py-3 rounded-full w-full sm:w-fit mr-2 my-4 bg-gradient-to-br text-white from-green-700 via-blue-400 to-pink-700 hover:from-pink-800 hover:via-blue-500 hover:to-green-800 transition-all duration-800'>
+                            Let&apos;s Talk
+                        </button>
+                    </Link>
+                    <Link href='https://docs.google.com/document/d/1-QX_5lJSUOBA7y4YAr5obEeAvouZLHRMvxpP2PEB-Io/edit?usp=sharing' target='_blank'>
+                        <button className='px-1 py-1 rounded-full w-full sm:w-fit bg-gradient-to-br from-green-500 via-blue-300 to-pink-500 hover:from-pink-400 hover:via-blue-500 hover:to-green-400'>
+                            <span className='block bg-white dark:bg-black w-full sm:w-fit rounded-full px-5 py-2'>
+                                Download Resume
+                            </span>
+                        </button>
+                    </Link>
                 </div>
             </motion.div>
             <motion.div 

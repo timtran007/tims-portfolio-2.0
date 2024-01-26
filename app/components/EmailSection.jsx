@@ -34,7 +34,6 @@ export default function EmailSection() {
             body: JSON.stringify(form)
         })
         if (response.status === 200) {
-            console.log('Message Sent')
             setEmailSubmitted(true)
             setForm(initialForm)
         } 
