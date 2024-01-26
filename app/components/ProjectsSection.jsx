@@ -111,7 +111,7 @@ export default function ProjectsSection() {
     return (
         <>
             <h2 className="text-center text-4xl font-bold mt-4 mb-6">My Projects</h2>
-            <div className='flex flex-row justify-center items-center gap-2 py-6 px-4'>
+            <div className='flex flex-wrap flex-row justify-center items-center gap-2 py-6 px-4'>
                 <ProjectTag handleTagChange={handleTagChange} tag="All" isSelected={tag === "All"}/>
                 <ProjectTag handleTagChange={handleTagChange} tag="Website" isSelected={tag === "Website"}/>
                 <ProjectTag handleTagChange={handleTagChange} tag="Web App" isSelected={tag === "Web App"}/>
