@@ -118,7 +118,7 @@ export default function ProjectsSection() {
         animate: { y: 0, opacity: 1 },
     }
     return (
-        <section>
+        <section id="projects">
             <h2 className="text-center text-4xl font-bold mt-4 mb-6">My Projects</h2>
             <div className='flex flex-wrap flex-row justify-center items-center gap-2 py-6 px-4'>
                 <ProjectTag handleTagChange={handleTagChange} tag="All" isSelected={tag === "All"}/>
@@ -132,7 +132,7 @@ export default function ProjectsSection() {
                         variants={cardVariants}
                         initial="initial"
                         animate={isInView ? "animate" : "initial"}
-                        transition={{ duration: 1, delay: index * 0.6 }}
+                        transition={{ duration: .75, delay: index * 0.3 }}
                         key={project.title}
                     >
                         <ProjectCard

@@ -8,7 +8,6 @@ import XMarkIcon from "@heroicons/react/24/solid/XMarkIcon"
 
 const navLinks = [
     {title: 'About', href: '/#about'},
-    {title: 'Skills', href: '/#skills'},
     {title: 'Projects', href: '/#projects'},
     {title: 'Contact', href: '/#contact'}
 ]
@@ -17,6 +16,10 @@ function Navbar() {
     const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
     const handleMenuClick = () => {
         setIsMobileNavOpen(!isMobileNavOpen)
+    }
+
+    function handleLinkClick(newState) {
+        setIsMobileNavOpen(newState)
     }
 
     return (
@@ -45,7 +48,7 @@ function Navbar() {
                     <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
                         {navLinks && navLinks.map( link => (
                                 <li key={link.title}>
-                                    <NavLink href={link.href} title={link.title}/>
+                                    <NavLink href={link.href} title={link.title} onHandleLinkClick={handleLinkClick}/>
                                 </li> 
                             )
                         )}
@@ -53,7 +56,7 @@ function Navbar() {
                 </div>
             </div>
             {isMobileNavOpen ? 
-                <MenuOverlay links={navLinks}/> :
+                <MenuOverlay links={navLinks} onHandleLinkClick={handleLinkClick}/> :
                 ''
             }
         </nav>

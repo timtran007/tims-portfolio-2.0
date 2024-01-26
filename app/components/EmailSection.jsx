@@ -41,7 +41,7 @@ export default function EmailSection() {
     }
 
     return (
-        <section className='grid md:grid-cols-2 my-8 md:my12 py-2 gap-4'>
+        <section id='contact' className='grid md:grid-cols-2 my-8 md:my12 py-2 gap-4'>
             <div>
                 <h5 className='text-xl font-bold my-2'>
                     Let&apos;s connect.
