@@ -15,7 +15,7 @@ export default function Home() {
         <ProjectsSection />
         <EmailSection />
       </div>
-      <div className='max-h-10'>
+      <div>
         <Footer />
       </div>
     </main>
