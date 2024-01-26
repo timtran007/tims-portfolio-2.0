@@ -41,7 +41,7 @@ export default function EmailSection() {
     }
 
     return (
-        <section className='grid md:grid-cols-2 my-12 md:my12 py-12 gap-4'>
+        <section className='grid md:grid-cols-2 my-8 md:my12 py-2 gap-4'>
             <div>
                 <h5 className='text-xl font-bold my-2'>
                     Let&apos;s connect.
@@ -49,7 +49,7 @@ export default function EmailSection() {
                 <p className='mb-4 max-w-md'>
                     I am always going to be interested in a cool projects. My inbox is open. Whether you want to work on something together or just want to say hi, I&apos;ll try my best to get back to you!
                 </p>
-                <div className="socials flex flex-row gap-2">
+                <div className="socials flex flex-row gap-2 mb-4">
                     <Link href="https://www.github.com/timtran007">
                         <Image src={gitHubIcon} alt="github icon" width={30} height={30} />
                     </Link>
