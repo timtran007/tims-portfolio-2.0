@@ -10,7 +10,7 @@ import tripSaveImage from "../../public/images/projects/trip-save.png";
 import onRecallImage from "../../public/images/projects/on-recall.png";
 import telemedicaImage from "../../public/images/projects/telemedica.png";
 import constantGuardianImage from "../../public/images/projects/constant-guardian.png";
-import profitSwordImage from "../../public/images/projects/profitsword.png";
+import profitSwordImage from "../../public/images/projects/ProfitSword.png";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
